@@ -1,10 +1,9 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>My AR Model</title>
 
@@ -16,7 +15,6 @@
     body {
       margin: 0;
       background: #111;
-      font-family: Arial, sans-serif;
     }
 
     model-viewer {
@@ -25,23 +23,12 @@
     }
 
     #ar-button {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      padding: 16px 28px;
-
+      background: white;
       border: none;
       border-radius: 30px;
-
-      background: white;
-      color: black;
-
+      padding: 16px 25px;
       font-size: 18px;
       font-weight: bold;
-
-      cursor: pointer;
     }
   </style>
 </head>
@@ -49,18 +36,15 @@
 <body>
 
 <model-viewer
-  id="model"
   src="./colorful_sports_car.glb"
-  alt="3D Triangle"
+  alt="My 3D Model"
   ar
-  ar-modes="webxr scene-viewer quick-look"
+  ar-modes="scene-viewer webxr quick-look"
   camera-controls
-  auto-rotate
-  shadow-intensity="1"
-  environment-image="neutral">
+  auto-rotate>
 
   <button id="ar-button" slot="ar-button">
-    📷 View in Real World
+    📷 View in AR
   </button>
 
 </model-viewer>
